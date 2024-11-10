@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 import Information from "@components/Information";
@@ -23,11 +23,13 @@ const UserProfile = ({ params }) => {
   }, [params.id]);
 
   return (
-    <Information
-      name={userName}
-      desc={`Welcome to ${userName}'s personalized profile page. Explore ${userName}'s exceptional prompts and be inspired by the power of their imagination`}
-      data={userPosts}
-    />
+    <Suspense fallback={<div>Loading...</div>}>
+      <Information
+        name={userName}
+        desc={`Welcome to ${userName}'s personalized profile page. Explore ${userName}'s exceptional prompts and be inspired by the power of their imagination`}
+        data={userPosts}
+      />
+    </Suspense>
   );
 };
 
