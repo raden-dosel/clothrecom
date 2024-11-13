@@ -5,9 +5,9 @@ import { Button } from "./ui/button";
 const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
   return (
     <section className="w-full max-w-full flex-start flex-col">
-      <h2 className="text-left bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-600">
+      <h3 className="text-left blue_gradient">
         <span className="text-transparent">{type} Post</span>
-      </h2>
+      </h3>
       <p className="text-left max-w-md">
         {type} and share amazing posts with the world, and let your imagination
         run wild with any AI-powered platform.

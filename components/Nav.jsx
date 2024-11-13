@@ -34,8 +34,8 @@ const Nav = () => {
   return (
     <nav className=" pt-3 mb-6 w-full flex-between">
       <div className="container mx-auto flex justify-between items-center">
-        <h3 className=" font-bold">
-          <Link className="text-primary" href="/">
+        <h3 className="pink_gradient font-bold">
+          <Link className="pink_gradient " href="/">
             ClothingRecom
           </Link>
         </h3>

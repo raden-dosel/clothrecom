@@ -137,6 +137,10 @@ a {
   @apply bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent;
 }
 
+.pink_gradient {
+  @apply bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent;
+}
+
 @layer base {
   :root {
     --background: 40 100% 97%;
