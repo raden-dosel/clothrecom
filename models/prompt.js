@@ -15,6 +15,14 @@ const PromptSchema = new Schema({
   },
 });
 
+// Example of using pre-save middleware
+PromptSchema.pre("save", function (next) {
+  // Perform some action before saving the document
+
+  console.log("A prompt is about to be saved:", this);
+  next();
+});
+
 const Prompt = models.Prompt || model("Prompt", PromptSchema);
 
 export default Prompt;

@@ -19,4 +19,11 @@ const UserSchema = new Schema({
 
 const User = models.User || model("User", UserSchema);
 
+UserSchema.pre("save", function (next) {
+  // Perform some action before saving the document
+
+  console.log("A user is about to be saved:", this);
+  next();
+});
+
 export default User;
