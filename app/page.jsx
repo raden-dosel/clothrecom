@@ -1,5 +1,5 @@
 import Feed from "@components/Feed";
-import React from "react";
+import { Suspense } from "react";
 
 const Home = () => {
   return (
@@ -8,8 +8,9 @@ const Home = () => {
       <p className="text-center">
         This is a sample website made with Clothrecom
       </p>
-
-      <Feed />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Feed />
+      </Suspense>
     </section>
   );
 };
